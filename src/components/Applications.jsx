@@ -1,8 +1,8 @@
 export const Applications = () => {
     const apps = [
-      { title: 'Residencial', desc: 'Living, Home Theater, Dormitórios', image: '/assets/ambiente_residencial_1765423265989.png' },
-      { title: 'Corporativo', desc: 'Recepções, Salas de Reunião, Auditórios', image: '/assets/ambiente_corporativo_1765423280687.png' },
-      { title: 'Comercial', desc: 'Hotéis, Restaurantes, Lojas', image: '/assets/ambiente_comercial_1765423294568.png' }
+      { title: 'Residencial', desc: 'Living, Home Theater, Dormitórios', image: `${import.meta.env.BASE_URL}assets/ambiente_residencial_1765423265989.png` },
+      { title: 'Corporativo', desc: 'Recepções, Salas de Reunião, Auditórios', image: `${import.meta.env.BASE_URL}assets/ambiente_corporativo_1765423280687.png` },
+      { title: 'Comercial', desc: 'Hotéis, Restaurantes, Lojas', image: `${import.meta.env.BASE_URL}assets/ambiente_comercial_1765423294568.png` }
     ];
   
     return (

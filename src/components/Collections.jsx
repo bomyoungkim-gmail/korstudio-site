@@ -8,7 +8,7 @@ const collectionsData = [
     id: 'naturale',
     title: 'Naturale',
     subtitle: 'A Essência da Matéria',
-    image: '/assets/naturale_panel_1765423205582.png',
+    image: `${import.meta.env.BASE_URL}assets/naturale_panel_1765423205582.png`,
     description: 'Veios autênticos e texturas orgânicas preservadas em sua essência.',
     fullDescription: 'Painéis com lâminas naturais autênticas que preservam os veios e características únicas da madeira.',
     specs: [
@@ -24,7 +24,7 @@ const collectionsData = [
     id: 'urbano',
     title: 'Urbano',
     subtitle: 'Minimalismo Metropolitano',
-    image: '/assets/urbano_panel_1765423219892.png',
+    image: `${import.meta.env.BASE_URL}assets/urbano_panel_1765423219892.png`,
     description: 'Linhas precisas e tonalidades sóbrias para a arquitetura contemporânea.',
     fullDescription: 'Texturas lineares e contemporâneas desenvolvidas para projetos corporativos e comerciais modernos.',
     specs: [
@@ -40,7 +40,7 @@ const collectionsData = [
     id: 'minimal',
     title: 'Minimal',
     subtitle: 'Pureza da Forma',
-    image: '/assets/minimal_panel_1765423234819.png',
+    image: `${import.meta.env.BASE_URL}assets/minimal_panel_1765423234819.png`,
     description: 'Superfícies monolíticas e acabamentos perfeitos. O silêncio visual.',
     fullDescription: 'Superfícies extremamente lisas com tonalidades neutras, essenciais para projetos minimalistas.',
     specs: [
@@ -56,7 +56,7 @@ const collectionsData = [
     id: 'especiais',
     title: 'Especiais',
     subtitle: 'Alfaiataria em Madeira',
-    image: '/assets/especiais_panel_1765423249036.png',
+    image: `${import.meta.env.BASE_URL}assets/especiais_panel_1765423249036.png`,
     description: 'Usinagens complexas e desenhos exclusivos. O limite é a criatividade.',
     fullDescription: 'Painéis com usinagens customizadas: ripados, canaletas, frisos e desenhos exclusivos.',
     specs: [
