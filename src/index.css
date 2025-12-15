@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    @apply text-brand-black bg-brand-white;
+  }
+  
+  body {
+    overflow-x: hidden;
+    @apply antialiased selection:bg-brand-black selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-light;
+  }
+}
