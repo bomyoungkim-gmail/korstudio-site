@@ -23,7 +23,7 @@ export const Hero = () => {
         <div className="lg:col-span-7 order-1 lg:order-2 h-[50vh] lg:h-[75vh] relative">
           <div className="absolute inset-0 bg-[#E8E6E1]">
             <img 
-              src="/assets/hero_ambiente.png" 
+              src={`${import.meta.env.BASE_URL}assets/hero_ambiente.png`} 
               alt="Ambiente Studio Kor"
               className="w-full h-full object-cover grayscale-[20%] contrast-[0.95]"
             />
