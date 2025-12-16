@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fichas Técnicas - Studio Kor</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+    h1 { color: #8B6F47; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #E5E1D8; padding: 10px; text-align: left; }
+    th { background: #8B6F47; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Fichas Técnicas - Painéis de Madeira</h1>
+  
+  <h2>Especificações Gerais</h2>
+  <table>
+    <tr>
+      <th>Característica</th>
+      <th>Especificação</th>
+    </tr>
+    <tr>
+      <td>Espessuras Padrão</td>
+      <td>15mm, 18mm, 25mm</td>
+    </tr>
+    <tr>
+      <td>Dimensões Máximas</td>
+      <td>2800mm x 1220mm</td>
+    </tr>
+    <tr>
+      <td>Substratos</td>
+      <td>MDF, Compensado</td>
+    </tr>
+    <tr>
+      <td>Acabamentos</td>
+      <td>Verniz UV, Laca, Óleo Natural</td>
+    </tr>
+    <tr>
+      <td>Garantia</td>
+      <td>12 meses</td>
+    </tr>
+  </table>
+
+  <h2>Instruções de Instalação</h2>
+  <ul>
+    <li>Aclimatar painéis no ambiente por 48h antes da instalação</li>
+    <li>Utilizar cola específica para madeira</li>
+    <li>Garantir superfície plana e nivelada</li>
+    <li>Respeitar juntas de dilatação conforme projeto</li>
+  </ul>
+
+  <h2>Cuidados e Manutenção</h2>
+  <ul>
+    <li>Limpeza com pano úmido e produtos neutros</li>
+    <li>Evitar exposição direta ao sol prolongada</li>
+    <li>Manter ambientes ventilados</li>
+    <li>Revisitar acabamento a cada 2-3 anos</li>
+  </ul>
+
+  <hr style="margin: 40px 0;">
+  <p><strong>Contato:</strong> contato@studiokor.com.br | (11) 3456-7890</p>
+</body>
+</html>

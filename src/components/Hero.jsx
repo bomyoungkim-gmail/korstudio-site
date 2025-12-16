@@ -20,7 +20,7 @@ export const Hero = () => {
         </div>
         
         {/* Editorial Image */}
-        <div className="lg:col-span-7 order-1 lg:order-2 h-[50vh] lg:h-[75vh] relative">
+        <div className="lg:col-span-7 order-1 lg:order-2 h-[50vh] lg:h-[75vh] lg:min-h-[500px] lg:max-h-[850px] relative">
           <div className="absolute inset-0 bg-[#E8E6E1]">
             <img 
               src={`${import.meta.env.BASE_URL}assets/hero_ambiente.png`} 
@@ -34,7 +34,7 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-pulse">
+      <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-50 animate-pulse">
         <span className="text-[9px] tracking-[0.2em] uppercase">Scroll</span>
         <ArrowDown className="w-3 h-3" />
       </div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo Studio Kor</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+    h1 { color: #8B6F47; }
+    h2 { color: #2A2A2A; border-bottom: 2px solid #8B6F47; padding-bottom: 5px; }
+    .collection { margin: 30px 0; padding: 20px; background: #FAF8F5; border-left: 4px solid #8B6F47; }
+  </style>
+</head>
+<body>
+  <h1>Studio Kor - Catálogo de Painéis de Madeira</h1>
+  <p><strong>Data:</strong> Dezembro 2024</p>
+
+  <div class="collection">
+    <h2>Coleção Naturale</h2>
+    <p>Painéis com lâminas naturais e veios marcantes</p>
+    <ul>
+      <li>Espessuras: 15mm, 18mm, 25mm</li>
+      <li>Lâminas: Nogueira, Freijó, Tauari, Carvalho</li>
+      <li>Acabamento: Verniz UV, laca ou óleo natural</li>
+    </ul>
+  </div>
+
+  <div class="collection">
+    <h2>Coleção Urbano</h2>
+    <p>Texturas contemporâneas para espaços corporativos</p>
+    <ul>
+      <li>Espessuras: 15mm, 18mm</li>
+      <li>Textura linear sutil e uniforme</li>
+      <li>Acabamento: Laca acetinada ou fosca</li>
+    </ul>
+  </div>
+
+  <div class="collection">
+    <h2>Coleção Minimal</h2>
+    <p>Superfícies lisas e neutras</p>
+    <ul>
+      <li>Espessuras: 15mm, 18mm, 25mm</li>
+      <li>Acabamento ultra liso</li>
+      <li>Cores: Bege claro, cinza, off-white</li>
+    </ul>
+  </div>
+
+  <div class="collection">
+    <h2>Coleção Especiais</h2>
+    <p>Painéis ripados e usinagens customizadas</p>
+    <ul>
+      <li>Usinagens: Ripado, canaletas, frisos</li>
+      <li>Portas camufladas e nichos</li>
+      <li>Dimensões totalmente personalizadas</li>
+    </ul>
+  </div>
+
+  <hr style="margin: 40px 0;">
+  <p><strong>Contato:</strong> contato@studiokor.com.br | (11) 3456-7890</p>
+</body>
+</html>

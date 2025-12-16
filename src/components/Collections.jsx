@@ -75,10 +75,10 @@ export const Collections = () => {
 
   return (
     <>
-      <section id="colecoes" className="py-32 lg:py-48 bg-brand-white">
+      <section id="colecoes" className="py-16 lg:py-24 bg-brand-white">
         <div className="max-w-[1800px] mx-auto px-4 lg:px-16">
-          <div className="mb-24 lg:mb-32 pl-4 border-l border-black/10">
-            <h2 className="font-serif text-4xl lg:text-6xl text-brand-black mb-4">
+          <div className="mb-12 lg:mb-16 pl-4 border-l border-black/10">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-brand-black mb-4">
               Coleções
             </h2>
             <p className="font-sans text-sm tracking-widest uppercase text-brand-gray">
@@ -86,7 +86,7 @@ export const Collections = () => {
             </p>
           </div>
 
-          <div className="space-y-32 lg:space-y-48">
+          <div className="space-y-16 lg:space-y-24">
             {collectionsData.map((collection, index) => (
               <article
                 key={collection.id}
@@ -94,7 +94,7 @@ export const Collections = () => {
                 onClick={() => setSelectedCollection(collection)}
               >
                 {/* Image Side */}
-                <div className={`lg:col-span-7 h-[60vh] lg:h-[80vh] overflow-hidden relative cursor-pointer ${index % 2 === 1 ? 'lg:order-last' : 'lg:order-first'}`}>
+                <div className={`lg:col-span-7 h-[50vh] min-h-[300px] max-h-[500px] md:h-[60vh] md:min-h-[400px] md:max-h-[700px] lg:h-[75vh] lg:min-h-[600px] lg:max-h-[900px] overflow-hidden relative cursor-pointer ${index % 2 === 1 ? 'lg:order-last' : 'lg:order-first'}`}>
                   <img
                     src={collection.image}
                     alt={collection.title}
@@ -110,18 +110,18 @@ export const Collections = () => {
                     <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-brand-gray">0{index + 1}</span>
                   </div>
                   
-                  <h3 className="font-serif text-5xl lg:text-7xl mb-4 group-hover:text-brand-black transition-colors">
+                  <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-3 group-hover:text-brand-black transition-colors">
                     {collection.title}
                   </h3>
-                  <p className="font-serif italic text-xl text-brand-gray mb-8">
+                  <p className="font-serif italic text-base md:text-lg lg:text-xl text-brand-gray mb-6">
                     {collection.subtitle}
                   </p>
-                  <p className="font-sans text-sm font-light text-brand-gray mb-12 max-w-sm leading-relaxed tracking-wide">
+                  <p className="font-sans text-sm md:text-sm font-light text-brand-gray mb-8 max-w-sm leading-relaxed tracking-wide">
                     {collection.description}
                   </p>
                   
                   <button className="flex items-center gap-4 group/btn pb-1 border-b border-black/20 hover:border-brand-black transition-all">
-                    <span className="font-sans text-[11px] uppercase tracking-[0.2em]">Ver Detalhes</span>
+                    <span className="font-sans text-[10px] md:text-[11px] uppercase tracking-[0.2em]">Ver Detalhes</span>
                     <Plus className="w-3 h-3 group-hover/btn:rotate-90 transition-transform duration-300" />
                   </button>
                 </div>
