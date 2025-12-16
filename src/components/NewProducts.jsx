@@ -38,6 +38,15 @@ export const NewProducts = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
 
+  // Drag State
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [currentTranslate, setCurrentTranslate] = useState(0);
+  const [dragStartTime, setDragStartTime] = useState(0);
+
+  // Constants
+  const minSwipeDistance = 50; // Threshold to trigger slide change
+  
   // Update window width on resize
   useEffect(() => {
     const handleResize = () => {
@@ -78,8 +87,49 @@ export const NewProducts = () => {
                                itemsPerView === 3 ? 30 : 
                                23; // 4 items = ~23% each with peek
 
+  // Handlers
+  const handleDragStart = (e) => {
+    e.preventDefault();
+    setIsDragging(true);
+    setDragStartTime(Date.now());
+    
+    // Support both mouse and touch
+    const clientX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+    setStartX(clientX);
+  };
+
+  const handleDragMove = (e) => {
+    if (!isDragging) return;
+    
+    const clientX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+    const currentPosition = clientX - startX;
+    setCurrentTranslate(currentPosition);
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+    const textSelection = window.getSelection();
+    if (textSelection) textSelection.removeAllRanges();
+
+    const dragDuration = Date.now() - dragStartTime;
+    const isQuickSwipe = dragDuration < 300;
+    
+    // Determine scroll direction and threshold
+    if (currentTranslate > minSwipeDistance || (isQuickSwipe && currentTranslate > 20)) {
+      if (canScrollLeft) scrollLeft();
+    } else if (currentTranslate < -minSwipeDistance || (isQuickSwipe && currentTranslate < -20)) {
+      if (canScrollRight) scrollRight();
+    }
+
+    // Reset drag translate
+    setCurrentTranslate(0);
+  };
+
+  // Prevent default image drag
+  const handleImageDragStart = (e) => e.preventDefault();
+
   return (
-    <section className="py-20 lg:py-24 bg-white overflow-hidden">
+    <section className="py-20 lg:py-24 bg-white overflow-hidden select-none">
       <div className="max-w-[1800px] mx-auto px-4 lg:px-16">
         {/* Title */}
         <div className="text-center mb-12">
@@ -118,30 +168,38 @@ export const NewProducts = () => {
           </button>
 
           {/* Products Carousel - Single Row with Peek */}
-          <div className="overflow-hidden mx-4 lg:mx-12">
+          <div className="overflow-hidden mx-4 lg:mx-12 cursor-grab active:cursor-grabbing">
             <div
-              className="flex gap-4 lg:gap-6 transition-transform duration-500 ease-out"
+              className={`flex gap-4 lg:gap-6 ${isDragging ? '' : 'transition-transform duration-500 ease-out'}`}
               style={{
-                transform: `translateX(-${currentIndex * itemWidthPercentage}%)`,
+                transform: `translateX(calc(-${currentIndex * itemWidthPercentage}% + ${currentTranslate}px))`,
               }}
+              onMouseDown={handleDragStart}
+              onMouseMove={handleDragMove}
+              onMouseUp={handleDragEnd}
+              onMouseLeave={handleDragEnd}
+              onTouchStart={handleDragStart}
+              onTouchMove={handleDragMove}
+              onTouchEnd={handleDragEnd}
             >
               {productsData.map((product) => (
                 <div
                   key={product.id}
-                  className="group cursor-pointer flex-shrink-0 max-w-[450px]"
+                  className="group flex-shrink-0 max-w-[450px]"
                   style={{
                     width: `${itemWidthPercentage}%`,
                   }}
                 >
                   {/* Product Image */}
-                  <div className="aspect-square bg-[#FAFAF8] mb-4 overflow-hidden flex items-center justify-center p-4 lg:p-6">
+                  <div className="aspect-square bg-[#FAFAF8] mb-4 overflow-hidden flex items-center justify-center p-4 lg:p-6" onDragStart={handleImageDragStart}>
                     <img
                       src={product.image}
                       alt={product.name}
+                      draggable="false"
                       className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-
+                  
                   {/* Product Name */}
                   <h3 className="font-sans text-xs lg:text-sm text-center text-brand-gray group-hover:text-brand-black transition-colors">
                     {product.name}

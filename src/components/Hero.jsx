@@ -10,13 +10,15 @@ export const Hero = () => {
           <span className="font-sans text-[10px] tracking-[0.4em] uppercase text-brand-gray mb-8 block ml-1">
             Painéis de Madeira Personalizados
           </span>
-          <h1 className="font-serif font-light text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] leading-[0.95] text-brand-black mb-12">
-            Arquitetura <br/>
-            <span className="italic font-normal">&</span> Matéria
-          </h1>
-          <p className="font-sans text-xs md:text-sm font-light text-brand-gray max-w-sm leading-relaxed tracking-wide ml-1 border-l border-black/10 pl-6">
-            Desenvolvemos superfícies em madeira natural para projetos que exigem excelência, precisão e sofisticação.
-          </p>
+          <div className="flex flex-col md:flex-row md:items-center md:gap-12 lg:flex-col lg:items-start lg:gap-0">
+            <h1 className="font-serif font-light text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] leading-[0.95] text-brand-black mb-12 md:mb-0 lg:mb-12 flex-shrink-0">
+              Arquitetura <br/>
+              <span className="italic font-normal">&</span> Matéria
+            </h1>
+            <p className="font-sans text-xs md:text-sm font-light text-brand-gray max-w-sm leading-relaxed tracking-wide ml-1 border-l border-black/10 pl-6">
+              Desenvolvemos superfícies em madeira natural para projetos que exigem excelência, precisão e sofisticação.
+            </p>
+          </div>
         </div>
         
         {/* Editorial Image */}
